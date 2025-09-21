@@ -1,0 +1,74 @@
+# ===== Composer =====
+/vendor/
+composer.phar
+# If you're building a reusable library, ignore the lock file:
+# composer.lock
+
+# ===== Environment & secrets =====
+.env
+.env.local
+.env.*.local
+.env.test
+.envrc
+*.env.bak
+
+# ===== Logs, caches, temp files =====
+*.log
+/cache/
+/tmp/
+/temp/
+/.cache/
+.phpunit.result.cache
+
+# ===== Test & coverage artifacts =====
+/coverage/
+clover.xml
+/junit.xml
+# Keep the distributable config but ignore local overrides
+/phpunit.xml
+!/phpunit.xml.dist
+
+# ===== Static analysis / code style caches =====
+.php-cs-fixer.cache
+.php_cs.cache
+/phpstan-cache/
+/.psalm-cache/
+/phan/cache/
+
+# ===== Databases (local dev) =====
+*.sqlite
+*.sqlite3
+*.db
+*.sqlite-*
+
+# ===== IDEs & editors =====
+.idea/
+.vscode/
+*.code-workspace
+*.sublime-*
+# Vim / Emacs
+*~
+*.swp
+*.swo
+*.swn
+*.swm
+.#*
+
+# ===== OS cruft =====
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ===== Node (if you have frontend assets in the same repo) =====
+/node_modules/
+/dist/
+/build/
+
+# ===== Docker & direnv (optional; uncomment if used) =====
+# .direnv/
+# .docker/
+# docker-compose.override.yml
+
+# ===== Keep placeholder files =====
+!.gitkeep
+!.gitignore
