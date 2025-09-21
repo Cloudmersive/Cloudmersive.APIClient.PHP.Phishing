@@ -1,0 +1,19 @@
+# PhishingDetectionEmailAdvancedResponse
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**clean_result** | **bool** | True if the result is not phishing (clean), and false otherwise | [optional] 
+**phishing_risk_level** | **double** | Overall phishing risk level between 0.0 and 1.0 | [optional] 
+**spam_risk_level** | **double** | Overall phishing spam level between 0.0 and 1.0 | [optional] 
+**contains_low_reputation_sender** | **bool** | True if the input email is from a low reputation sender | [optional] 
+**contains_phishing** | **bool** | True if the input email contains phishing threat risks, false otherwise | [optional] 
+**contains_spam** | **bool** | True if the email contains phishing threat risks, false otherwise | [optional] 
+**contains_unsolicited_sales** | **bool** | True if the input email contains unsolicited sales, false otherwise | [optional] 
+**contains_promotional_content** | **bool** | True if the input email contains promotional content, false otherwise | [optional] 
+**contains_phishing_attempt** | **bool** | True if the input email contains a phishing attempt, false otherwise | [optional] 
+**analysis_rationale** | **string** | Rationale for why the conclusion was formed | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
