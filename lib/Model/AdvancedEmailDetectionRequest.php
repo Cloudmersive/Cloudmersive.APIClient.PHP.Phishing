@@ -64,6 +64,7 @@ class AdvancedEmailDetectionRequest implements ModelInterface, ArrayAccess
         'html_body' => 'string',
         'allow_low_reputation_senders' => 'bool',
         'allow_sanctioned' => 'bool',
+        'custom_policy_id' => 'string',
         'input_email_file' => 'string'
     ];
 
@@ -79,6 +80,7 @@ class AdvancedEmailDetectionRequest implements ModelInterface, ArrayAccess
         'html_body' => null,
         'allow_low_reputation_senders' => null,
         'allow_sanctioned' => null,
+        'custom_policy_id' => null,
         'input_email_file' => 'byte'
     ];
 
@@ -115,6 +117,7 @@ class AdvancedEmailDetectionRequest implements ModelInterface, ArrayAccess
         'html_body' => 'HtmlBody',
         'allow_low_reputation_senders' => 'AllowLowReputationSenders',
         'allow_sanctioned' => 'AllowSanctioned',
+        'custom_policy_id' => 'CustomPolicyID',
         'input_email_file' => 'InputEmailFile'
     ];
 
@@ -130,6 +133,7 @@ class AdvancedEmailDetectionRequest implements ModelInterface, ArrayAccess
         'html_body' => 'setHtmlBody',
         'allow_low_reputation_senders' => 'setAllowLowReputationSenders',
         'allow_sanctioned' => 'setAllowSanctioned',
+        'custom_policy_id' => 'setCustomPolicyId',
         'input_email_file' => 'setInputEmailFile'
     ];
 
@@ -145,6 +149,7 @@ class AdvancedEmailDetectionRequest implements ModelInterface, ArrayAccess
         'html_body' => 'getHtmlBody',
         'allow_low_reputation_senders' => 'getAllowLowReputationSenders',
         'allow_sanctioned' => 'getAllowSanctioned',
+        'custom_policy_id' => 'getCustomPolicyId',
         'input_email_file' => 'getInputEmailFile'
     ];
 
@@ -214,6 +219,7 @@ class AdvancedEmailDetectionRequest implements ModelInterface, ArrayAccess
         $this->container['html_body'] = isset($data['html_body']) ? $data['html_body'] : null;
         $this->container['allow_low_reputation_senders'] = isset($data['allow_low_reputation_senders']) ? $data['allow_low_reputation_senders'] : null;
         $this->container['allow_sanctioned'] = isset($data['allow_sanctioned']) ? $data['allow_sanctioned'] : null;
+        $this->container['custom_policy_id'] = isset($data['custom_policy_id']) ? $data['custom_policy_id'] : null;
         $this->container['input_email_file'] = isset($data['input_email_file']) ? $data['input_email_file'] : null;
     }
 
@@ -390,6 +396,30 @@ class AdvancedEmailDetectionRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets custom_policy_id
+     *
+     * @return string
+     */
+    public function getCustomPolicyId()
+    {
+        return $this->container['custom_policy_id'];
+    }
+
+    /**
+     * Sets custom_policy_id
+     *
+     * @param string $custom_policy_id Apply a Custom Policy for Phishing Enforcement by providing the ID; to create a Custom Policy,  navigate to the Cloudmersive Management Portal and select Custom Policies.  Requires Managed Instance or Private Cloud
+     *
+     * @return $this
+     */
+    public function setCustomPolicyId($custom_policy_id)
+    {
+        $this->container['custom_policy_id'] = $custom_policy_id;
+
+        return $this;
+    }
+
+    /**
      * Gets input_email_file
      *
      * @return string
@@ -402,7 +432,7 @@ class AdvancedEmailDetectionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets input_email_file
      *
-     * @param string $input_email_file input_email_file
+     * @param string $input_email_file Optional: Input email file bytes (EML, PDF, etc.).  If not provided, HtmlBody will be used instead.
      *
      * @return $this
      */

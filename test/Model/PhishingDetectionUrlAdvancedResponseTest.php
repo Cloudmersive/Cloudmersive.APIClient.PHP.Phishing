@@ -1,6 +1,6 @@
 <?php
 /**
- * PhishingDetectionAdvancedRequestTest
+ * PhishingDetectionUrlAdvancedResponseTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Swagger\Client;
 
 /**
- * PhishingDetectionAdvancedRequestTest Class Doc Comment
+ * PhishingDetectionUrlAdvancedResponseTest Class Doc Comment
  *
  * @category    Class
- * @description AI advanced phishing detection request
+ * @description Result of detecting phishing from a URL using AI
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PhishingDetectionAdvancedRequestTest extends \PHPUnit_Framework_TestCase
+class PhishingDetectionUrlAdvancedResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,86 +70,65 @@ class PhishingDetectionAdvancedRequestTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PhishingDetectionAdvancedRequest"
+     * Test "PhishingDetectionUrlAdvancedResponse"
      */
-    public function testPhishingDetectionAdvancedRequest()
+    public function testPhishingDetectionUrlAdvancedResponse()
     {
     }
 
     /**
-     * Test attribute "input_string"
+     * Test attribute "clean_result"
      */
-    public function testPropertyInputString()
+    public function testPropertyCleanResult()
     {
     }
 
     /**
-     * Test attribute "model"
+     * Test attribute "phishing_risk_level"
      */
-    public function testPropertyModel()
+    public function testPropertyPhishingRiskLevel()
     {
     }
 
     /**
-     * Test attribute "custom_policy_id"
+     * Test attribute "is_ssrf_threat"
      */
-    public function testPropertyCustomPolicyId()
+    public function testPropertyIsSsrfThreat()
     {
     }
 
     /**
-     * Test attribute "provide_analysis_rationale"
+     * Test attribute "contains_phishing"
      */
-    public function testPropertyProvideAnalysisRationale()
+    public function testPropertyContainsPhishing()
     {
     }
 
     /**
-     * Test attribute "text_type"
+     * Test attribute "contains_unsolicited_sales"
      */
-    public function testPropertyTextType()
+    public function testPropertyContainsUnsolicitedSales()
     {
     }
 
     /**
-     * Test attribute "from_name"
+     * Test attribute "contains_promotional_content"
      */
-    public function testPropertyFromName()
+    public function testPropertyContainsPromotionalContent()
     {
     }
 
     /**
-     * Test attribute "to_name"
+     * Test attribute "contains_phishing_attempt"
      */
-    public function testPropertyToName()
+    public function testPropertyContainsPhishingAttempt()
     {
     }
 
     /**
-     * Test attribute "from_phone_number"
+     * Test attribute "analysis_rationale"
      */
-    public function testPropertyFromPhoneNumber()
-    {
-    }
-
-    /**
-     * Test attribute "to_phone_number"
-     */
-    public function testPropertyToPhoneNumber()
-    {
-    }
-
-    /**
-     * Test attribute "from_email_address"
-     */
-    public function testPropertyFromEmailAddress()
-    {
-    }
-
-    /**
-     * Test attribute "to_email_address"
-     */
-    public function testPropertyToEmailAddress()
+    public function testPropertyAnalysisRationale()
     {
     }
 }

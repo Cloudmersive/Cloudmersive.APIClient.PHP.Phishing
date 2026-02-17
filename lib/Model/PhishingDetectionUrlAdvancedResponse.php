@@ -1,6 +1,6 @@
 <?php
 /**
- * PhishingDetectionAdvancedResponse
+ * PhishingDetectionUrlAdvancedResponse
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * PhishingDetectionAdvancedResponse Class Doc Comment
+ * PhishingDetectionUrlAdvancedResponse Class Doc Comment
  *
  * @category Class
- * @description Result of detecting phishing using AI
+ * @description Result of detecting phishing from a URL using AI
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
+class PhishingDetectionUrlAdvancedResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'PhishingDetectionAdvancedResponse';
+    protected static $swaggerModelName = 'PhishingDetectionUrlAdvancedResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,7 +60,11 @@ class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'clean_result' => 'bool',
         'phishing_risk_level' => 'double',
-        'confidence_level' => 'double',
+        'is_ssrf_threat' => 'bool',
+        'contains_phishing' => 'bool',
+        'contains_unsolicited_sales' => 'bool',
+        'contains_promotional_content' => 'bool',
+        'contains_phishing_attempt' => 'bool',
         'analysis_rationale' => 'string'
     ];
 
@@ -72,7 +76,11 @@ class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'clean_result' => null,
         'phishing_risk_level' => 'double',
-        'confidence_level' => 'double',
+        'is_ssrf_threat' => null,
+        'contains_phishing' => null,
+        'contains_unsolicited_sales' => null,
+        'contains_promotional_content' => null,
+        'contains_phishing_attempt' => null,
         'analysis_rationale' => null
     ];
 
@@ -105,7 +113,11 @@ class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'clean_result' => 'CleanResult',
         'phishing_risk_level' => 'PhishingRiskLevel',
-        'confidence_level' => 'ConfidenceLevel',
+        'is_ssrf_threat' => 'IsSsrfThreat',
+        'contains_phishing' => 'ContainsPhishing',
+        'contains_unsolicited_sales' => 'ContainsUnsolicitedSales',
+        'contains_promotional_content' => 'ContainsPromotionalContent',
+        'contains_phishing_attempt' => 'ContainsPhishingAttempt',
         'analysis_rationale' => 'AnalysisRationale'
     ];
 
@@ -117,7 +129,11 @@ class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
         'clean_result' => 'setCleanResult',
         'phishing_risk_level' => 'setPhishingRiskLevel',
-        'confidence_level' => 'setConfidenceLevel',
+        'is_ssrf_threat' => 'setIsSsrfThreat',
+        'contains_phishing' => 'setContainsPhishing',
+        'contains_unsolicited_sales' => 'setContainsUnsolicitedSales',
+        'contains_promotional_content' => 'setContainsPromotionalContent',
+        'contains_phishing_attempt' => 'setContainsPhishingAttempt',
         'analysis_rationale' => 'setAnalysisRationale'
     ];
 
@@ -129,7 +145,11 @@ class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
         'clean_result' => 'getCleanResult',
         'phishing_risk_level' => 'getPhishingRiskLevel',
-        'confidence_level' => 'getConfidenceLevel',
+        'is_ssrf_threat' => 'getIsSsrfThreat',
+        'contains_phishing' => 'getContainsPhishing',
+        'contains_unsolicited_sales' => 'getContainsUnsolicitedSales',
+        'contains_promotional_content' => 'getContainsPromotionalContent',
+        'contains_phishing_attempt' => 'getContainsPhishingAttempt',
         'analysis_rationale' => 'getAnalysisRationale'
     ];
 
@@ -195,7 +215,11 @@ class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
     {
         $this->container['clean_result'] = isset($data['clean_result']) ? $data['clean_result'] : null;
         $this->container['phishing_risk_level'] = isset($data['phishing_risk_level']) ? $data['phishing_risk_level'] : null;
-        $this->container['confidence_level'] = isset($data['confidence_level']) ? $data['confidence_level'] : null;
+        $this->container['is_ssrf_threat'] = isset($data['is_ssrf_threat']) ? $data['is_ssrf_threat'] : null;
+        $this->container['contains_phishing'] = isset($data['contains_phishing']) ? $data['contains_phishing'] : null;
+        $this->container['contains_unsolicited_sales'] = isset($data['contains_unsolicited_sales']) ? $data['contains_unsolicited_sales'] : null;
+        $this->container['contains_promotional_content'] = isset($data['contains_promotional_content']) ? $data['contains_promotional_content'] : null;
+        $this->container['contains_phishing_attempt'] = isset($data['contains_phishing_attempt']) ? $data['contains_phishing_attempt'] : null;
         $this->container['analysis_rationale'] = isset($data['analysis_rationale']) ? $data['analysis_rationale'] : null;
     }
 
@@ -272,25 +296,121 @@ class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets confidence_level
+     * Gets is_ssrf_threat
      *
-     * @return double
+     * @return bool
      */
-    public function getConfidenceLevel()
+    public function getIsSsrfThreat()
     {
-        return $this->container['confidence_level'];
+        return $this->container['is_ssrf_threat'];
     }
 
     /**
-     * Sets confidence_level
+     * Sets is_ssrf_threat
      *
-     * @param double $confidence_level Confidence level between 0.0 and 1.0 where values over 0.9 indicate high confidence
+     * @param bool $is_ssrf_threat True if the URL is an SSRF threat
      *
      * @return $this
      */
-    public function setConfidenceLevel($confidence_level)
+    public function setIsSsrfThreat($is_ssrf_threat)
     {
-        $this->container['confidence_level'] = $confidence_level;
+        $this->container['is_ssrf_threat'] = $is_ssrf_threat;
+
+        return $this;
+    }
+
+    /**
+     * Gets contains_phishing
+     *
+     * @return bool
+     */
+    public function getContainsPhishing()
+    {
+        return $this->container['contains_phishing'];
+    }
+
+    /**
+     * Sets contains_phishing
+     *
+     * @param bool $contains_phishing True if the URL contains phishing threat risks, false otherwise
+     *
+     * @return $this
+     */
+    public function setContainsPhishing($contains_phishing)
+    {
+        $this->container['contains_phishing'] = $contains_phishing;
+
+        return $this;
+    }
+
+    /**
+     * Gets contains_unsolicited_sales
+     *
+     * @return bool
+     */
+    public function getContainsUnsolicitedSales()
+    {
+        return $this->container['contains_unsolicited_sales'];
+    }
+
+    /**
+     * Sets contains_unsolicited_sales
+     *
+     * @param bool $contains_unsolicited_sales True if the URL contains unsolicited sales, false otherwise
+     *
+     * @return $this
+     */
+    public function setContainsUnsolicitedSales($contains_unsolicited_sales)
+    {
+        $this->container['contains_unsolicited_sales'] = $contains_unsolicited_sales;
+
+        return $this;
+    }
+
+    /**
+     * Gets contains_promotional_content
+     *
+     * @return bool
+     */
+    public function getContainsPromotionalContent()
+    {
+        return $this->container['contains_promotional_content'];
+    }
+
+    /**
+     * Sets contains_promotional_content
+     *
+     * @param bool $contains_promotional_content True if the URL contains promotional content, false otherwise
+     *
+     * @return $this
+     */
+    public function setContainsPromotionalContent($contains_promotional_content)
+    {
+        $this->container['contains_promotional_content'] = $contains_promotional_content;
+
+        return $this;
+    }
+
+    /**
+     * Gets contains_phishing_attempt
+     *
+     * @return bool
+     */
+    public function getContainsPhishingAttempt()
+    {
+        return $this->container['contains_phishing_attempt'];
+    }
+
+    /**
+     * Sets contains_phishing_attempt
+     *
+     * @param bool $contains_phishing_attempt True if the URL contains a phishing attempt, false otherwise
+     *
+     * @return $this
+     */
+    public function setContainsPhishingAttempt($contains_phishing_attempt)
+    {
+        $this->container['contains_phishing_attempt'] = $contains_phishing_attempt;
 
         return $this;
     }

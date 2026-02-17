@@ -1,6 +1,6 @@
 <?php
 /**
- * PhishingDetectionAdvancedResponse
+ * AdvancedUrlDetectionRequest
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * PhishingDetectionAdvancedResponse Class Doc Comment
+ * AdvancedUrlDetectionRequest Class Doc Comment
  *
  * @category Class
- * @description Result of detecting phishing using AI
+ * @description Request to detect phishing from a URL
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
+class AdvancedUrlDetectionRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'PhishingDetectionAdvancedResponse';
+    protected static $swaggerModelName = 'AdvancedUrlDetectionRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,10 +58,8 @@ class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'clean_result' => 'bool',
-        'phishing_risk_level' => 'double',
-        'confidence_level' => 'double',
-        'analysis_rationale' => 'string'
+        'url' => 'string',
+        'custom_policy_id' => 'string'
     ];
 
     /**
@@ -70,10 +68,8 @@ class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'clean_result' => null,
-        'phishing_risk_level' => 'double',
-        'confidence_level' => 'double',
-        'analysis_rationale' => null
+        'url' => null,
+        'custom_policy_id' => null
     ];
 
     /**
@@ -103,10 +99,8 @@ class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'clean_result' => 'CleanResult',
-        'phishing_risk_level' => 'PhishingRiskLevel',
-        'confidence_level' => 'ConfidenceLevel',
-        'analysis_rationale' => 'AnalysisRationale'
+        'url' => 'Url',
+        'custom_policy_id' => 'CustomPolicyID'
     ];
 
     /**
@@ -115,10 +109,8 @@ class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'clean_result' => 'setCleanResult',
-        'phishing_risk_level' => 'setPhishingRiskLevel',
-        'confidence_level' => 'setConfidenceLevel',
-        'analysis_rationale' => 'setAnalysisRationale'
+        'url' => 'setUrl',
+        'custom_policy_id' => 'setCustomPolicyId'
     ];
 
     /**
@@ -127,10 +119,8 @@ class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'clean_result' => 'getCleanResult',
-        'phishing_risk_level' => 'getPhishingRiskLevel',
-        'confidence_level' => 'getConfidenceLevel',
-        'analysis_rationale' => 'getAnalysisRationale'
+        'url' => 'getUrl',
+        'custom_policy_id' => 'getCustomPolicyId'
     ];
 
     /**
@@ -193,10 +183,8 @@ class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['clean_result'] = isset($data['clean_result']) ? $data['clean_result'] : null;
-        $this->container['phishing_risk_level'] = isset($data['phishing_risk_level']) ? $data['phishing_risk_level'] : null;
-        $this->container['confidence_level'] = isset($data['confidence_level']) ? $data['confidence_level'] : null;
-        $this->container['analysis_rationale'] = isset($data['analysis_rationale']) ? $data['analysis_rationale'] : null;
+        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['custom_policy_id'] = isset($data['custom_policy_id']) ? $data['custom_policy_id'] : null;
     }
 
     /**
@@ -224,97 +212,49 @@ class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets clean_result
-     *
-     * @return bool
-     */
-    public function getCleanResult()
-    {
-        return $this->container['clean_result'];
-    }
-
-    /**
-     * Sets clean_result
-     *
-     * @param bool $clean_result True if the result is not phishing (clean), and false otherwise
-     *
-     * @return $this
-     */
-    public function setCleanResult($clean_result)
-    {
-        $this->container['clean_result'] = $clean_result;
-
-        return $this;
-    }
-
-    /**
-     * Gets phishing_risk_level
-     *
-     * @return double
-     */
-    public function getPhishingRiskLevel()
-    {
-        return $this->container['phishing_risk_level'];
-    }
-
-    /**
-     * Sets phishing_risk_level
-     *
-     * @param double $phishing_risk_level Overall phishing risk level between 0.0 and 1.0
-     *
-     * @return $this
-     */
-    public function setPhishingRiskLevel($phishing_risk_level)
-    {
-        $this->container['phishing_risk_level'] = $phishing_risk_level;
-
-        return $this;
-    }
-
-    /**
-     * Gets confidence_level
-     *
-     * @return double
-     */
-    public function getConfidenceLevel()
-    {
-        return $this->container['confidence_level'];
-    }
-
-    /**
-     * Sets confidence_level
-     *
-     * @param double $confidence_level Confidence level between 0.0 and 1.0 where values over 0.9 indicate high confidence
-     *
-     * @return $this
-     */
-    public function setConfidenceLevel($confidence_level)
-    {
-        $this->container['confidence_level'] = $confidence_level;
-
-        return $this;
-    }
-
-    /**
-     * Gets analysis_rationale
+     * Gets url
      *
      * @return string
      */
-    public function getAnalysisRationale()
+    public function getUrl()
     {
-        return $this->container['analysis_rationale'];
+        return $this->container['url'];
     }
 
     /**
-     * Sets analysis_rationale
+     * Sets url
      *
-     * @param string $analysis_rationale Rationale for why the conclusion was formed
+     * @param string $url URL to check for phishing
      *
      * @return $this
      */
-    public function setAnalysisRationale($analysis_rationale)
+    public function setUrl($url)
     {
-        $this->container['analysis_rationale'] = $analysis_rationale;
+        $this->container['url'] = $url;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_policy_id
+     *
+     * @return string
+     */
+    public function getCustomPolicyId()
+    {
+        return $this->container['custom_policy_id'];
+    }
+
+    /**
+     * Sets custom_policy_id
+     *
+     * @param string $custom_policy_id Apply a Custom Policy for Phishing Enforcement by providing the ID; to create a Custom Policy,  navigate to the Cloudmersive Management Portal and select Custom Policies.  Requires Managed Instance or Private Cloud
+     *
+     * @return $this
+     */
+    public function setCustomPolicyId($custom_policy_id)
+    {
+        $this->container['custom_policy_id'] = $custom_policy_id;
 
         return $this;
     }

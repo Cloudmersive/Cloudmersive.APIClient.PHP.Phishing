@@ -1,6 +1,6 @@
 <?php
 /**
- * PhishingDetectionAdvancedResponseTest
+ * AdvancedUrlDetectionRequestTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Swagger\Client;
 
 /**
- * PhishingDetectionAdvancedResponseTest Class Doc Comment
+ * AdvancedUrlDetectionRequestTest Class Doc Comment
  *
  * @category    Class
- * @description Result of detecting phishing using AI
+ * @description Request to detect phishing from a URL
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PhishingDetectionAdvancedResponseTest extends \PHPUnit_Framework_TestCase
+class AdvancedUrlDetectionRequestTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,37 +70,23 @@ class PhishingDetectionAdvancedResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PhishingDetectionAdvancedResponse"
+     * Test "AdvancedUrlDetectionRequest"
      */
-    public function testPhishingDetectionAdvancedResponse()
+    public function testAdvancedUrlDetectionRequest()
     {
     }
 
     /**
-     * Test attribute "clean_result"
+     * Test attribute "url"
      */
-    public function testPropertyCleanResult()
+    public function testPropertyUrl()
     {
     }
 
     /**
-     * Test attribute "phishing_risk_level"
+     * Test attribute "custom_policy_id"
      */
-    public function testPropertyPhishingRiskLevel()
-    {
-    }
-
-    /**
-     * Test attribute "confidence_level"
-     */
-    public function testPropertyConfidenceLevel()
-    {
-    }
-
-    /**
-     * Test attribute "analysis_rationale"
-     */
-    public function testPropertyAnalysisRationale()
+    public function testPropertyCustomPolicyId()
     {
     }
 }

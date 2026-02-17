@@ -119,6 +119,13 @@ class AdvancedEmailDetectionRequestTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "custom_policy_id"
+     */
+    public function testPropertyCustomPolicyId()
+    {
+    }
+
+    /**
      * Test attribute "input_email_file"
      */
     public function testPropertyInputEmailFile()

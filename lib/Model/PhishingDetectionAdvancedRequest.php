@@ -59,7 +59,16 @@ class PhishingDetectionAdvancedRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'input_string' => 'string',
-        'model' => 'string'
+        'model' => 'string',
+        'custom_policy_id' => 'string',
+        'provide_analysis_rationale' => 'bool',
+        'text_type' => 'string',
+        'from_name' => 'string',
+        'to_name' => 'string',
+        'from_phone_number' => 'string',
+        'to_phone_number' => 'string',
+        'from_email_address' => 'string',
+        'to_email_address' => 'string'
     ];
 
     /**
@@ -69,7 +78,16 @@ class PhishingDetectionAdvancedRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'input_string' => null,
-        'model' => null
+        'model' => null,
+        'custom_policy_id' => null,
+        'provide_analysis_rationale' => null,
+        'text_type' => null,
+        'from_name' => null,
+        'to_name' => null,
+        'from_phone_number' => null,
+        'to_phone_number' => null,
+        'from_email_address' => null,
+        'to_email_address' => null
     ];
 
     /**
@@ -100,7 +118,16 @@ class PhishingDetectionAdvancedRequest implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'input_string' => 'InputString',
-        'model' => 'Model'
+        'model' => 'Model',
+        'custom_policy_id' => 'CustomPolicyID',
+        'provide_analysis_rationale' => 'ProvideAnalysisRationale',
+        'text_type' => 'TextType',
+        'from_name' => 'FromName',
+        'to_name' => 'ToName',
+        'from_phone_number' => 'FromPhoneNumber',
+        'to_phone_number' => 'ToPhoneNumber',
+        'from_email_address' => 'FromEmailAddress',
+        'to_email_address' => 'ToEmailAddress'
     ];
 
     /**
@@ -110,7 +137,16 @@ class PhishingDetectionAdvancedRequest implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'input_string' => 'setInputString',
-        'model' => 'setModel'
+        'model' => 'setModel',
+        'custom_policy_id' => 'setCustomPolicyId',
+        'provide_analysis_rationale' => 'setProvideAnalysisRationale',
+        'text_type' => 'setTextType',
+        'from_name' => 'setFromName',
+        'to_name' => 'setToName',
+        'from_phone_number' => 'setFromPhoneNumber',
+        'to_phone_number' => 'setToPhoneNumber',
+        'from_email_address' => 'setFromEmailAddress',
+        'to_email_address' => 'setToEmailAddress'
     ];
 
     /**
@@ -120,7 +156,16 @@ class PhishingDetectionAdvancedRequest implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'input_string' => 'getInputString',
-        'model' => 'getModel'
+        'model' => 'getModel',
+        'custom_policy_id' => 'getCustomPolicyId',
+        'provide_analysis_rationale' => 'getProvideAnalysisRationale',
+        'text_type' => 'getTextType',
+        'from_name' => 'getFromName',
+        'to_name' => 'getToName',
+        'from_phone_number' => 'getFromPhoneNumber',
+        'to_phone_number' => 'getToPhoneNumber',
+        'from_email_address' => 'getFromEmailAddress',
+        'to_email_address' => 'getToEmailAddress'
     ];
 
     /**
@@ -185,6 +230,15 @@ class PhishingDetectionAdvancedRequest implements ModelInterface, ArrayAccess
     {
         $this->container['input_string'] = isset($data['input_string']) ? $data['input_string'] : null;
         $this->container['model'] = isset($data['model']) ? $data['model'] : null;
+        $this->container['custom_policy_id'] = isset($data['custom_policy_id']) ? $data['custom_policy_id'] : null;
+        $this->container['provide_analysis_rationale'] = isset($data['provide_analysis_rationale']) ? $data['provide_analysis_rationale'] : null;
+        $this->container['text_type'] = isset($data['text_type']) ? $data['text_type'] : null;
+        $this->container['from_name'] = isset($data['from_name']) ? $data['from_name'] : null;
+        $this->container['to_name'] = isset($data['to_name']) ? $data['to_name'] : null;
+        $this->container['from_phone_number'] = isset($data['from_phone_number']) ? $data['from_phone_number'] : null;
+        $this->container['to_phone_number'] = isset($data['to_phone_number']) ? $data['to_phone_number'] : null;
+        $this->container['from_email_address'] = isset($data['from_email_address']) ? $data['from_email_address'] : null;
+        $this->container['to_email_address'] = isset($data['to_email_address']) ? $data['to_email_address'] : null;
     }
 
     /**
@@ -255,6 +309,222 @@ class PhishingDetectionAdvancedRequest implements ModelInterface, ArrayAccess
     public function setModel($model)
     {
         $this->container['model'] = $model;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_policy_id
+     *
+     * @return string
+     */
+    public function getCustomPolicyId()
+    {
+        return $this->container['custom_policy_id'];
+    }
+
+    /**
+     * Sets custom_policy_id
+     *
+     * @param string $custom_policy_id Apply a Custom Policy for Phishing Enforcement by providing the ID; to create a Custom Policy,  navigate to the Cloudmersive Management Portal and select Custom Policies.  Requires Managed Instance or Private Cloud
+     *
+     * @return $this
+     */
+    public function setCustomPolicyId($custom_policy_id)
+    {
+        $this->container['custom_policy_id'] = $custom_policy_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets provide_analysis_rationale
+     *
+     * @return bool
+     */
+    public function getProvideAnalysisRationale()
+    {
+        return $this->container['provide_analysis_rationale'];
+    }
+
+    /**
+     * Sets provide_analysis_rationale
+     *
+     * @param bool $provide_analysis_rationale Optional: Set to true to include an analysis rationale in the response explaining why the content was or was not flagged.  Default is true.
+     *
+     * @return $this
+     */
+    public function setProvideAnalysisRationale($provide_analysis_rationale)
+    {
+        $this->container['provide_analysis_rationale'] = $provide_analysis_rationale;
+
+        return $this;
+    }
+
+    /**
+     * Gets text_type
+     *
+     * @return string
+     */
+    public function getTextType()
+    {
+        return $this->container['text_type'];
+    }
+
+    /**
+     * Sets text_type
+     *
+     * @param string $text_type Optional: Type of text being analyzed. Must be one of: \"Text Message\", \"User Message\", \"Sales Lead\", \"Email Message\", \"Support Case\", \"Other\".
+     *
+     * @return $this
+     */
+    public function setTextType($text_type)
+    {
+        $this->container['text_type'] = $text_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets from_name
+     *
+     * @return string
+     */
+    public function getFromName()
+    {
+        return $this->container['from_name'];
+    }
+
+    /**
+     * Sets from_name
+     *
+     * @param string $from_name Optional: Name of the sender
+     *
+     * @return $this
+     */
+    public function setFromName($from_name)
+    {
+        $this->container['from_name'] = $from_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets to_name
+     *
+     * @return string
+     */
+    public function getToName()
+    {
+        return $this->container['to_name'];
+    }
+
+    /**
+     * Sets to_name
+     *
+     * @param string $to_name Optional: Name of the recipient
+     *
+     * @return $this
+     */
+    public function setToName($to_name)
+    {
+        $this->container['to_name'] = $to_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets from_phone_number
+     *
+     * @return string
+     */
+    public function getFromPhoneNumber()
+    {
+        return $this->container['from_phone_number'];
+    }
+
+    /**
+     * Sets from_phone_number
+     *
+     * @param string $from_phone_number Optional: Phone number of the sender
+     *
+     * @return $this
+     */
+    public function setFromPhoneNumber($from_phone_number)
+    {
+        $this->container['from_phone_number'] = $from_phone_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets to_phone_number
+     *
+     * @return string
+     */
+    public function getToPhoneNumber()
+    {
+        return $this->container['to_phone_number'];
+    }
+
+    /**
+     * Sets to_phone_number
+     *
+     * @param string $to_phone_number Optional: Phone number of the recipient
+     *
+     * @return $this
+     */
+    public function setToPhoneNumber($to_phone_number)
+    {
+        $this->container['to_phone_number'] = $to_phone_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets from_email_address
+     *
+     * @return string
+     */
+    public function getFromEmailAddress()
+    {
+        return $this->container['from_email_address'];
+    }
+
+    /**
+     * Sets from_email_address
+     *
+     * @param string $from_email_address Optional: Email address of the sender
+     *
+     * @return $this
+     */
+    public function setFromEmailAddress($from_email_address)
+    {
+        $this->container['from_email_address'] = $from_email_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets to_email_address
+     *
+     * @return string
+     */
+    public function getToEmailAddress()
+    {
+        return $this->container['to_email_address'];
+    }
+
+    /**
+     * Sets to_email_address
+     *
+     * @param string $to_email_address Optional: Email address of the recipient
+     *
+     * @return $this
+     */
+    public function setToEmailAddress($to_email_address)
+    {
+        $this->container['to_email_address'] = $to_email_address;
 
         return $this;
     }
