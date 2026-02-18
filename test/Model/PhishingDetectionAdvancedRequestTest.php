@@ -84,9 +84,58 @@ class PhishingDetectionAdvancedRequestTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "text_type"
+     */
+    public function testPropertyTextType()
+    {
+    }
+
+    /**
      * Test attribute "model"
      */
     public function testPropertyModel()
+    {
+    }
+
+    /**
+     * Test attribute "allow_unsolicited_sales"
+     */
+    public function testPropertyAllowUnsolicitedSales()
+    {
+    }
+
+    /**
+     * Test attribute "allow_promotional_content"
+     */
+    public function testPropertyAllowPromotionalContent()
+    {
+    }
+
+    /**
+     * Test attribute "allow_web_urls"
+     */
+    public function testPropertyAllowWebUrls()
+    {
+    }
+
+    /**
+     * Test attribute "allow_phone_numbers"
+     */
+    public function testPropertyAllowPhoneNumbers()
+    {
+    }
+
+    /**
+     * Test attribute "allow_email_addresses"
+     */
+    public function testPropertyAllowEmailAddresses()
+    {
+    }
+
+    /**
+     * Test attribute "provide_url_analysis"
+     */
+    public function testPropertyProvideUrlAnalysis()
     {
     }
 
@@ -101,13 +150,6 @@ class PhishingDetectionAdvancedRequestTest extends \PHPUnit_Framework_TestCase
      * Test attribute "provide_analysis_rationale"
      */
     public function testPropertyProvideAnalysisRationale()
-    {
-    }
-
-    /**
-     * Test attribute "text_type"
-     */
-    public function testPropertyTextType()
     {
     }
 

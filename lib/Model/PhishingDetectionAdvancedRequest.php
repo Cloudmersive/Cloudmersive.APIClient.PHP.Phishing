@@ -59,10 +59,16 @@ class PhishingDetectionAdvancedRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'input_string' => 'string',
+        'text_type' => 'string',
         'model' => 'string',
+        'allow_unsolicited_sales' => 'bool',
+        'allow_promotional_content' => 'bool',
+        'allow_web_urls' => 'bool',
+        'allow_phone_numbers' => 'bool',
+        'allow_email_addresses' => 'bool',
+        'provide_url_analysis' => 'bool',
         'custom_policy_id' => 'string',
         'provide_analysis_rationale' => 'bool',
-        'text_type' => 'string',
         'from_name' => 'string',
         'to_name' => 'string',
         'from_phone_number' => 'string',
@@ -78,10 +84,16 @@ class PhishingDetectionAdvancedRequest implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'input_string' => null,
+        'text_type' => null,
         'model' => null,
+        'allow_unsolicited_sales' => null,
+        'allow_promotional_content' => null,
+        'allow_web_urls' => null,
+        'allow_phone_numbers' => null,
+        'allow_email_addresses' => null,
+        'provide_url_analysis' => null,
         'custom_policy_id' => null,
         'provide_analysis_rationale' => null,
-        'text_type' => null,
         'from_name' => null,
         'to_name' => null,
         'from_phone_number' => null,
@@ -118,10 +130,16 @@ class PhishingDetectionAdvancedRequest implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'input_string' => 'InputString',
+        'text_type' => 'TextType',
         'model' => 'Model',
+        'allow_unsolicited_sales' => 'AllowUnsolicitedSales',
+        'allow_promotional_content' => 'AllowPromotionalContent',
+        'allow_web_urls' => 'AllowWebUrls',
+        'allow_phone_numbers' => 'AllowPhoneNumbers',
+        'allow_email_addresses' => 'AllowEmailAddresses',
+        'provide_url_analysis' => 'ProvideUrlAnalysis',
         'custom_policy_id' => 'CustomPolicyID',
         'provide_analysis_rationale' => 'ProvideAnalysisRationale',
-        'text_type' => 'TextType',
         'from_name' => 'FromName',
         'to_name' => 'ToName',
         'from_phone_number' => 'FromPhoneNumber',
@@ -137,10 +155,16 @@ class PhishingDetectionAdvancedRequest implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'input_string' => 'setInputString',
+        'text_type' => 'setTextType',
         'model' => 'setModel',
+        'allow_unsolicited_sales' => 'setAllowUnsolicitedSales',
+        'allow_promotional_content' => 'setAllowPromotionalContent',
+        'allow_web_urls' => 'setAllowWebUrls',
+        'allow_phone_numbers' => 'setAllowPhoneNumbers',
+        'allow_email_addresses' => 'setAllowEmailAddresses',
+        'provide_url_analysis' => 'setProvideUrlAnalysis',
         'custom_policy_id' => 'setCustomPolicyId',
         'provide_analysis_rationale' => 'setProvideAnalysisRationale',
-        'text_type' => 'setTextType',
         'from_name' => 'setFromName',
         'to_name' => 'setToName',
         'from_phone_number' => 'setFromPhoneNumber',
@@ -156,10 +180,16 @@ class PhishingDetectionAdvancedRequest implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'input_string' => 'getInputString',
+        'text_type' => 'getTextType',
         'model' => 'getModel',
+        'allow_unsolicited_sales' => 'getAllowUnsolicitedSales',
+        'allow_promotional_content' => 'getAllowPromotionalContent',
+        'allow_web_urls' => 'getAllowWebUrls',
+        'allow_phone_numbers' => 'getAllowPhoneNumbers',
+        'allow_email_addresses' => 'getAllowEmailAddresses',
+        'provide_url_analysis' => 'getProvideUrlAnalysis',
         'custom_policy_id' => 'getCustomPolicyId',
         'provide_analysis_rationale' => 'getProvideAnalysisRationale',
-        'text_type' => 'getTextType',
         'from_name' => 'getFromName',
         'to_name' => 'getToName',
         'from_phone_number' => 'getFromPhoneNumber',
@@ -229,10 +259,16 @@ class PhishingDetectionAdvancedRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['input_string'] = isset($data['input_string']) ? $data['input_string'] : null;
+        $this->container['text_type'] = isset($data['text_type']) ? $data['text_type'] : null;
         $this->container['model'] = isset($data['model']) ? $data['model'] : null;
+        $this->container['allow_unsolicited_sales'] = isset($data['allow_unsolicited_sales']) ? $data['allow_unsolicited_sales'] : null;
+        $this->container['allow_promotional_content'] = isset($data['allow_promotional_content']) ? $data['allow_promotional_content'] : null;
+        $this->container['allow_web_urls'] = isset($data['allow_web_urls']) ? $data['allow_web_urls'] : null;
+        $this->container['allow_phone_numbers'] = isset($data['allow_phone_numbers']) ? $data['allow_phone_numbers'] : null;
+        $this->container['allow_email_addresses'] = isset($data['allow_email_addresses']) ? $data['allow_email_addresses'] : null;
+        $this->container['provide_url_analysis'] = isset($data['provide_url_analysis']) ? $data['provide_url_analysis'] : null;
         $this->container['custom_policy_id'] = isset($data['custom_policy_id']) ? $data['custom_policy_id'] : null;
         $this->container['provide_analysis_rationale'] = isset($data['provide_analysis_rationale']) ? $data['provide_analysis_rationale'] : null;
-        $this->container['text_type'] = isset($data['text_type']) ? $data['text_type'] : null;
         $this->container['from_name'] = isset($data['from_name']) ? $data['from_name'] : null;
         $this->container['to_name'] = isset($data['to_name']) ? $data['to_name'] : null;
         $this->container['from_phone_number'] = isset($data['from_phone_number']) ? $data['from_phone_number'] : null;
@@ -290,6 +326,30 @@ class PhishingDetectionAdvancedRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets text_type
+     *
+     * @return string
+     */
+    public function getTextType()
+    {
+        return $this->container['text_type'];
+    }
+
+    /**
+     * Sets text_type
+     *
+     * @param string $text_type Optional: Type of text being analyzed. Must be one of: \"TextMessage\", \"UserMessage\", \"SalesLead\", \"EmailMessage\", \"SupportCase\", \"AppMessage\", \"Other\".
+     *
+     * @return $this
+     */
+    public function setTextType($text_type)
+    {
+        $this->container['text_type'] = $text_type;
+
+        return $this;
+    }
+
+    /**
      * Gets model
      *
      * @return string
@@ -309,6 +369,150 @@ class PhishingDetectionAdvancedRequest implements ModelInterface, ArrayAccess
     public function setModel($model)
     {
         $this->container['model'] = $model;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_unsolicited_sales
+     *
+     * @return bool
+     */
+    public function getAllowUnsolicitedSales()
+    {
+        return $this->container['allow_unsolicited_sales'];
+    }
+
+    /**
+     * Sets allow_unsolicited_sales
+     *
+     * @param bool $allow_unsolicited_sales Optional: True if unsolicited sales should be allowed, false otherwise. Defaults to true.
+     *
+     * @return $this
+     */
+    public function setAllowUnsolicitedSales($allow_unsolicited_sales)
+    {
+        $this->container['allow_unsolicited_sales'] = $allow_unsolicited_sales;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_promotional_content
+     *
+     * @return bool
+     */
+    public function getAllowPromotionalContent()
+    {
+        return $this->container['allow_promotional_content'];
+    }
+
+    /**
+     * Sets allow_promotional_content
+     *
+     * @param bool $allow_promotional_content Optional: True if promotional content should be allowed, false otherwise. Defaults to true.
+     *
+     * @return $this
+     */
+    public function setAllowPromotionalContent($allow_promotional_content)
+    {
+        $this->container['allow_promotional_content'] = $allow_promotional_content;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_web_urls
+     *
+     * @return bool
+     */
+    public function getAllowWebUrls()
+    {
+        return $this->container['allow_web_urls'];
+    }
+
+    /**
+     * Sets allow_web_urls
+     *
+     * @param bool $allow_web_urls Optional: True if web URLs should be allowed in the input text, false otherwise. Defaults to true. When false, input containing URLs (including homoglyph URLs and spaced-out URLs) will be flagged as not clean.
+     *
+     * @return $this
+     */
+    public function setAllowWebUrls($allow_web_urls)
+    {
+        $this->container['allow_web_urls'] = $allow_web_urls;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_phone_numbers
+     *
+     * @return bool
+     */
+    public function getAllowPhoneNumbers()
+    {
+        return $this->container['allow_phone_numbers'];
+    }
+
+    /**
+     * Sets allow_phone_numbers
+     *
+     * @param bool $allow_phone_numbers Optional: True if phone numbers should be allowed in the input text, false otherwise. Defaults to true. When false, input containing phone numbers (including homoglyph digits and spaced-out or spelled-out workarounds) will be flagged as not clean.
+     *
+     * @return $this
+     */
+    public function setAllowPhoneNumbers($allow_phone_numbers)
+    {
+        $this->container['allow_phone_numbers'] = $allow_phone_numbers;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_email_addresses
+     *
+     * @return bool
+     */
+    public function getAllowEmailAddresses()
+    {
+        return $this->container['allow_email_addresses'];
+    }
+
+    /**
+     * Sets allow_email_addresses
+     *
+     * @param bool $allow_email_addresses Optional: True if email addresses should be allowed in the input text, false otherwise. Defaults to true. When false, input containing email addresses (including homoglyph characters and obfuscated workarounds like \"danny at somedomaine [DOT] com\") will be flagged as not clean.
+     *
+     * @return $this
+     */
+    public function setAllowEmailAddresses($allow_email_addresses)
+    {
+        $this->container['allow_email_addresses'] = $allow_email_addresses;
+
+        return $this;
+    }
+
+    /**
+     * Gets provide_url_analysis
+     *
+     * @return bool
+     */
+    public function getProvideUrlAnalysis()
+    {
+        return $this->container['provide_url_analysis'];
+    }
+
+    /**
+     * Sets provide_url_analysis
+     *
+     * @param bool $provide_url_analysis Optional: True to perform deep URL analysis on any URLs detected in the text. When enabled, if the initial AI scan detects URLs, a second AI call enumerates them and each URL is individually analyzed for phishing. Defaults to true.
+     *
+     * @return $this
+     */
+    public function setProvideUrlAnalysis($provide_url_analysis)
+    {
+        $this->container['provide_url_analysis'] = $provide_url_analysis;
 
         return $this;
     }
@@ -357,30 +561,6 @@ class PhishingDetectionAdvancedRequest implements ModelInterface, ArrayAccess
     public function setProvideAnalysisRationale($provide_analysis_rationale)
     {
         $this->container['provide_analysis_rationale'] = $provide_analysis_rationale;
-
-        return $this;
-    }
-
-    /**
-     * Gets text_type
-     *
-     * @return string
-     */
-    public function getTextType()
-    {
-        return $this->container['text_type'];
-    }
-
-    /**
-     * Sets text_type
-     *
-     * @param string $text_type Optional: Type of text being analyzed. Must be one of: \"Text Message\", \"User Message\", \"Sales Lead\", \"Email Message\", \"Support Case\", \"Other\".
-     *
-     * @return $this
-     */
-    public function setTextType($text_type)
-    {
-        $this->container['text_type'] = $text_type;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * PhishingDetectionAdvancedResponseTest
+ * PhishingDetectionTextStringResponseTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Swagger\Client;
 
 /**
- * PhishingDetectionAdvancedResponseTest Class Doc Comment
+ * PhishingDetectionTextStringResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Result of detecting phishing using AI
+ * @description Result of detecting phishing using AI for basic text string analysis
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PhishingDetectionAdvancedResponseTest extends \PHPUnit_Framework_TestCase
+class PhishingDetectionTextStringResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,9 +70,9 @@ class PhishingDetectionAdvancedResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PhishingDetectionAdvancedResponse"
+     * Test "PhishingDetectionTextStringResponse"
      */
-    public function testPhishingDetectionAdvancedResponse()
+    public function testPhishingDetectionTextStringResponse()
     {
     }
 
@@ -80,48 +80,6 @@ class PhishingDetectionAdvancedResponseTest extends \PHPUnit_Framework_TestCase
      * Test attribute "clean_result"
      */
     public function testPropertyCleanResult()
-    {
-    }
-
-    /**
-     * Test attribute "contains_phishing"
-     */
-    public function testPropertyContainsPhishing()
-    {
-    }
-
-    /**
-     * Test attribute "contains_unsolicited_sales"
-     */
-    public function testPropertyContainsUnsolicitedSales()
-    {
-    }
-
-    /**
-     * Test attribute "contains_promotional_content"
-     */
-    public function testPropertyContainsPromotionalContent()
-    {
-    }
-
-    /**
-     * Test attribute "contains_web_urls"
-     */
-    public function testPropertyContainsWebUrls()
-    {
-    }
-
-    /**
-     * Test attribute "contains_phone_numbers"
-     */
-    public function testPropertyContainsPhoneNumbers()
-    {
-    }
-
-    /**
-     * Test attribute "contains_email_addresses"
-     */
-    public function testPropertyContainsEmailAddresses()
     {
     }
 
@@ -136,13 +94,6 @@ class PhishingDetectionAdvancedResponseTest extends \PHPUnit_Framework_TestCase
      * Test attribute "analysis_rationale"
      */
     public function testPropertyAnalysisRationale()
-    {
-    }
-
-    /**
-     * Test attribute "unsafe_urls"
-     */
-    public function testPropertyUnsafeUrls()
     {
     }
 }

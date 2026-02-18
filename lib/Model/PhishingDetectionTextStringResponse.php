@@ -1,6 +1,6 @@
 <?php
 /**
- * PhishingDetectionAdvancedResponse
+ * PhishingDetectionTextStringResponse
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * PhishingDetectionAdvancedResponse Class Doc Comment
+ * PhishingDetectionTextStringResponse Class Doc Comment
  *
  * @category Class
- * @description Result of detecting phishing using AI
+ * @description Result of detecting phishing using AI for basic text string analysis
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
+class PhishingDetectionTextStringResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'PhishingDetectionAdvancedResponse';
+    protected static $swaggerModelName = 'PhishingDetectionTextStringResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,15 +59,8 @@ class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'clean_result' => 'bool',
-        'contains_phishing' => 'bool',
-        'contains_unsolicited_sales' => 'bool',
-        'contains_promotional_content' => 'bool',
-        'contains_web_urls' => 'bool',
-        'contains_phone_numbers' => 'bool',
-        'contains_email_addresses' => 'bool',
         'confidence_level' => 'double',
-        'analysis_rationale' => 'string',
-        'unsafe_urls' => '\Swagger\Client\Model\UnsafeUrlResult[]'
+        'analysis_rationale' => 'string'
     ];
 
     /**
@@ -77,15 +70,8 @@ class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'clean_result' => null,
-        'contains_phishing' => null,
-        'contains_unsolicited_sales' => null,
-        'contains_promotional_content' => null,
-        'contains_web_urls' => null,
-        'contains_phone_numbers' => null,
-        'contains_email_addresses' => null,
         'confidence_level' => 'double',
-        'analysis_rationale' => null,
-        'unsafe_urls' => null
+        'analysis_rationale' => null
     ];
 
     /**
@@ -116,15 +102,8 @@ class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'clean_result' => 'CleanResult',
-        'contains_phishing' => 'ContainsPhishing',
-        'contains_unsolicited_sales' => 'ContainsUnsolicitedSales',
-        'contains_promotional_content' => 'ContainsPromotionalContent',
-        'contains_web_urls' => 'ContainsWebUrls',
-        'contains_phone_numbers' => 'ContainsPhoneNumbers',
-        'contains_email_addresses' => 'ContainsEmailAddresses',
         'confidence_level' => 'ConfidenceLevel',
-        'analysis_rationale' => 'AnalysisRationale',
-        'unsafe_urls' => 'UnsafeUrls'
+        'analysis_rationale' => 'AnalysisRationale'
     ];
 
     /**
@@ -134,15 +113,8 @@ class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'clean_result' => 'setCleanResult',
-        'contains_phishing' => 'setContainsPhishing',
-        'contains_unsolicited_sales' => 'setContainsUnsolicitedSales',
-        'contains_promotional_content' => 'setContainsPromotionalContent',
-        'contains_web_urls' => 'setContainsWebUrls',
-        'contains_phone_numbers' => 'setContainsPhoneNumbers',
-        'contains_email_addresses' => 'setContainsEmailAddresses',
         'confidence_level' => 'setConfidenceLevel',
-        'analysis_rationale' => 'setAnalysisRationale',
-        'unsafe_urls' => 'setUnsafeUrls'
+        'analysis_rationale' => 'setAnalysisRationale'
     ];
 
     /**
@@ -152,15 +124,8 @@ class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'clean_result' => 'getCleanResult',
-        'contains_phishing' => 'getContainsPhishing',
-        'contains_unsolicited_sales' => 'getContainsUnsolicitedSales',
-        'contains_promotional_content' => 'getContainsPromotionalContent',
-        'contains_web_urls' => 'getContainsWebUrls',
-        'contains_phone_numbers' => 'getContainsPhoneNumbers',
-        'contains_email_addresses' => 'getContainsEmailAddresses',
         'confidence_level' => 'getConfidenceLevel',
-        'analysis_rationale' => 'getAnalysisRationale',
-        'unsafe_urls' => 'getUnsafeUrls'
+        'analysis_rationale' => 'getAnalysisRationale'
     ];
 
     /**
@@ -224,15 +189,8 @@ class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['clean_result'] = isset($data['clean_result']) ? $data['clean_result'] : null;
-        $this->container['contains_phishing'] = isset($data['contains_phishing']) ? $data['contains_phishing'] : null;
-        $this->container['contains_unsolicited_sales'] = isset($data['contains_unsolicited_sales']) ? $data['contains_unsolicited_sales'] : null;
-        $this->container['contains_promotional_content'] = isset($data['contains_promotional_content']) ? $data['contains_promotional_content'] : null;
-        $this->container['contains_web_urls'] = isset($data['contains_web_urls']) ? $data['contains_web_urls'] : null;
-        $this->container['contains_phone_numbers'] = isset($data['contains_phone_numbers']) ? $data['contains_phone_numbers'] : null;
-        $this->container['contains_email_addresses'] = isset($data['contains_email_addresses']) ? $data['contains_email_addresses'] : null;
         $this->container['confidence_level'] = isset($data['confidence_level']) ? $data['confidence_level'] : null;
         $this->container['analysis_rationale'] = isset($data['analysis_rationale']) ? $data['analysis_rationale'] : null;
-        $this->container['unsafe_urls'] = isset($data['unsafe_urls']) ? $data['unsafe_urls'] : null;
     }
 
     /**
@@ -284,150 +242,6 @@ class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets contains_phishing
-     *
-     * @return bool
-     */
-    public function getContainsPhishing()
-    {
-        return $this->container['contains_phishing'];
-    }
-
-    /**
-     * Sets contains_phishing
-     *
-     * @param bool $contains_phishing True if the input text contains a phishing attempt, false otherwise
-     *
-     * @return $this
-     */
-    public function setContainsPhishing($contains_phishing)
-    {
-        $this->container['contains_phishing'] = $contains_phishing;
-
-        return $this;
-    }
-
-    /**
-     * Gets contains_unsolicited_sales
-     *
-     * @return bool
-     */
-    public function getContainsUnsolicitedSales()
-    {
-        return $this->container['contains_unsolicited_sales'];
-    }
-
-    /**
-     * Sets contains_unsolicited_sales
-     *
-     * @param bool $contains_unsolicited_sales True if the input text contains unsolicited sales, false otherwise
-     *
-     * @return $this
-     */
-    public function setContainsUnsolicitedSales($contains_unsolicited_sales)
-    {
-        $this->container['contains_unsolicited_sales'] = $contains_unsolicited_sales;
-
-        return $this;
-    }
-
-    /**
-     * Gets contains_promotional_content
-     *
-     * @return bool
-     */
-    public function getContainsPromotionalContent()
-    {
-        return $this->container['contains_promotional_content'];
-    }
-
-    /**
-     * Sets contains_promotional_content
-     *
-     * @param bool $contains_promotional_content True if the input text contains promotional content, false otherwise
-     *
-     * @return $this
-     */
-    public function setContainsPromotionalContent($contains_promotional_content)
-    {
-        $this->container['contains_promotional_content'] = $contains_promotional_content;
-
-        return $this;
-    }
-
-    /**
-     * Gets contains_web_urls
-     *
-     * @return bool
-     */
-    public function getContainsWebUrls()
-    {
-        return $this->container['contains_web_urls'];
-    }
-
-    /**
-     * Sets contains_web_urls
-     *
-     * @param bool $contains_web_urls True if the input text contains web URLs, including homoglyph URLs and spaced-out URL workarounds
-     *
-     * @return $this
-     */
-    public function setContainsWebUrls($contains_web_urls)
-    {
-        $this->container['contains_web_urls'] = $contains_web_urls;
-
-        return $this;
-    }
-
-    /**
-     * Gets contains_phone_numbers
-     *
-     * @return bool
-     */
-    public function getContainsPhoneNumbers()
-    {
-        return $this->container['contains_phone_numbers'];
-    }
-
-    /**
-     * Sets contains_phone_numbers
-     *
-     * @param bool $contains_phone_numbers True if the input text contains phone numbers, including homoglyph digits and spaced-out or spelled-out workarounds
-     *
-     * @return $this
-     */
-    public function setContainsPhoneNumbers($contains_phone_numbers)
-    {
-        $this->container['contains_phone_numbers'] = $contains_phone_numbers;
-
-        return $this;
-    }
-
-    /**
-     * Gets contains_email_addresses
-     *
-     * @return bool
-     */
-    public function getContainsEmailAddresses()
-    {
-        return $this->container['contains_email_addresses'];
-    }
-
-    /**
-     * Sets contains_email_addresses
-     *
-     * @param bool $contains_email_addresses True if the input text contains email addresses, including homoglyph characters and obfuscated workarounds
-     *
-     * @return $this
-     */
-    public function setContainsEmailAddresses($contains_email_addresses)
-    {
-        $this->container['contains_email_addresses'] = $contains_email_addresses;
-
-        return $this;
-    }
-
-    /**
      * Gets confidence_level
      *
      * @return double
@@ -471,30 +285,6 @@ class PhishingDetectionAdvancedResponse implements ModelInterface, ArrayAccess
     public function setAnalysisRationale($analysis_rationale)
     {
         $this->container['analysis_rationale'] = $analysis_rationale;
-
-        return $this;
-    }
-
-    /**
-     * Gets unsafe_urls
-     *
-     * @return \Swagger\Client\Model\UnsafeUrlResult[]
-     */
-    public function getUnsafeUrls()
-    {
-        return $this->container['unsafe_urls'];
-    }
-
-    /**
-     * Sets unsafe_urls
-     *
-     * @param \Swagger\Client\Model\UnsafeUrlResult[] $unsafe_urls URLs detected in the input text that were analyzed and found to be unsafe. Only populated when ProvideUrlAnalysis is true and URLs are detected.
-     *
-     * @return $this
-     */
-    public function setUnsafeUrls($unsafe_urls)
-    {
-        $this->container['unsafe_urls'] = $unsafe_urls;
 
         return $this;
     }

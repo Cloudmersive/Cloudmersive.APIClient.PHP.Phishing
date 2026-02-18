@@ -112,6 +112,16 @@ class PhishingDetectionApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for phishingDetectTextStringPost
+     *
+     * Perform AI phishing detection against input text string.  Returns a clean/not-clean result with confidence level and optional rationale..
+     *
+     */
+    public function testPhishingDetectTextStringPost()
+    {
+    }
+
+    /**
      * Test case for phishingDetectUrlAdvancedPost
      *
      * Perform advanced AI phishing detection and classification against an input URL.  Retrieves the URL content, checks for SSRF threats, and analyzes the page with AI deep learning to detect phishing and other unsafe content.  Uses 100-125 API calls..
