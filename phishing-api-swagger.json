@@ -11,7 +11,7 @@
         "tags": [
           "PhishingDetection"
         ],
-        "summary": "Perform AI phishing detection and classification on an input image or document (PDF or DOCX).  Analyzes input content as well as embedded URLs with AI deep learnign to detect phishing and other unsafe content.  Uses 100-125 API calls depending on model selected.",
+        "summary": "Perform AI phishing detection and classification on an input image or document (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, HTML, EML, MSG, PNG, JPG, WEBP).  Analyzes input content as well as embedded URLs with AI deep learning to detect phishing and other unsafe content.  Uses 100-125 API calls depending on model selected.",
         "consumes": [
           "multipart/form-data"
         ],
@@ -85,7 +85,7 @@
         "tags": [
           "PhishingDetection"
         ],
-        "summary": "Perform advanced AI phishing detection and classification against input text string.  Analyzes input content as well as embedded URLs with AI deep learnign to detect spam, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.",
+        "summary": "Perform advanced AI phishing detection and classification against input text string.  Analyzes input content as well as embedded URLs with AI deep learning to detect spam, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.",
         "consumes": [
           "application/json",
           "text/json",
@@ -121,7 +121,7 @@
         "tags": [
           "PhishingDetection"
         ],
-        "summary": "Perform advanced AI phishing detection and classification against input text string.  Analyzes input content as well as embedded URLs with AI deep learning to detect phishing, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.",
+        "summary": "Perform advanced AI phishing detection and classification on an input image or document (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, HTML, EML, MSG, PNG, JPG, WEBP).  Analyzes input content as well as embedded URLs with AI deep learning to detect phishing, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.",
         "consumes": [
           "multipart/form-data"
         ],
@@ -163,7 +163,7 @@
         "tags": [
           "PhishingDetection"
         ],
-        "summary": "Perform advanced AI phishing detection and classification against input email.  Analyzes input email as well as embedded URLs with AI deep learning to detect phishing, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.",
+        "summary": "Perform advanced AI phishing detection and classification against input email.  Supports email input as a file (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, HTML, EML, MSG, PNG, JPG, WEBP) or as an HTML body string.  Analyzes input email as well as embedded URLs with AI deep learning to detect phishing, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.",
         "consumes": [
           "application/json",
           "text/json",
@@ -375,6 +375,13 @@
           "description": "Optional: Email address of the recipient",
           "type": "string",
           "example": "jane.doe@cloudmersive.com"
+        },
+        "PriorHistory": {
+          "description": "Optional: Prior context history (e.g. message history) leading up to the current input string. If provided, the AI will take this history into account as context when evaluating the current input.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PriorHistoryItem"
+          }
         }
       },
       "additionalProperties": false
@@ -568,6 +575,53 @@
         "AnalysisRationale": {
           "description": "Rationale for why the conclusion was formed",
           "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "PriorHistoryItem": {
+      "description": "A single message in the prior conversation history",
+      "type": "object",
+      "properties": {
+        "InputString": {
+          "description": "The text content of this historical message",
+          "type": "string",
+          "example": "Hello, how can I help you today?"
+        },
+        "FromName": {
+          "description": "Optional: Name of the sender",
+          "type": "string",
+          "example": "John Smith"
+        },
+        "ToName": {
+          "description": "Optional: Name of the recipient",
+          "type": "string",
+          "example": "Jane Doe"
+        },
+        "FromPhoneNumber": {
+          "description": "Optional: Phone number of the sender",
+          "type": "string",
+          "example": "+1-555-123-4567"
+        },
+        "ToPhoneNumber": {
+          "description": "Optional: Phone number of the recipient",
+          "type": "string",
+          "example": "+1-555-987-6543"
+        },
+        "FromEmailAddress": {
+          "description": "Optional: Email address of the sender",
+          "type": "string",
+          "example": "john.smith@cloudmersive.com"
+        },
+        "ToEmailAddress": {
+          "description": "Optional: Email address of the recipient",
+          "type": "string",
+          "example": "jane.doe@cloudmersive.com"
+        },
+        "TrustedParty": {
+          "description": "Optional: True if this message is from a trusted party (such as our own company), false otherwise",
+          "type": "boolean",
+          "example": true
         }
       },
       "additionalProperties": false

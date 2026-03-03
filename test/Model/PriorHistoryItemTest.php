@@ -1,6 +1,6 @@
 <?php
 /**
- * PhishingDetectionAdvancedRequestTest
+ * PriorHistoryItemTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Swagger\Client;
 
 /**
- * PhishingDetectionAdvancedRequestTest Class Doc Comment
+ * PriorHistoryItemTest Class Doc Comment
  *
  * @category    Class
- * @description AI advanced phishing detection request
+ * @description A single message in the prior conversation history
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PhishingDetectionAdvancedRequestTest extends \PHPUnit_Framework_TestCase
+class PriorHistoryItemTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,9 +70,9 @@ class PhishingDetectionAdvancedRequestTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PhishingDetectionAdvancedRequest"
+     * Test "PriorHistoryItem"
      */
-    public function testPhishingDetectionAdvancedRequest()
+    public function testPriorHistoryItem()
     {
     }
 
@@ -80,76 +80,6 @@ class PhishingDetectionAdvancedRequestTest extends \PHPUnit_Framework_TestCase
      * Test attribute "input_string"
      */
     public function testPropertyInputString()
-    {
-    }
-
-    /**
-     * Test attribute "text_type"
-     */
-    public function testPropertyTextType()
-    {
-    }
-
-    /**
-     * Test attribute "model"
-     */
-    public function testPropertyModel()
-    {
-    }
-
-    /**
-     * Test attribute "allow_unsolicited_sales"
-     */
-    public function testPropertyAllowUnsolicitedSales()
-    {
-    }
-
-    /**
-     * Test attribute "allow_promotional_content"
-     */
-    public function testPropertyAllowPromotionalContent()
-    {
-    }
-
-    /**
-     * Test attribute "allow_web_urls"
-     */
-    public function testPropertyAllowWebUrls()
-    {
-    }
-
-    /**
-     * Test attribute "allow_phone_numbers"
-     */
-    public function testPropertyAllowPhoneNumbers()
-    {
-    }
-
-    /**
-     * Test attribute "allow_email_addresses"
-     */
-    public function testPropertyAllowEmailAddresses()
-    {
-    }
-
-    /**
-     * Test attribute "provide_url_analysis"
-     */
-    public function testPropertyProvideUrlAnalysis()
-    {
-    }
-
-    /**
-     * Test attribute "custom_policy_id"
-     */
-    public function testPropertyCustomPolicyId()
-    {
-    }
-
-    /**
-     * Test attribute "provide_analysis_rationale"
-     */
-    public function testPropertyProvideAnalysisRationale()
     {
     }
 
@@ -196,9 +126,9 @@ class PhishingDetectionAdvancedRequestTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "prior_history"
+     * Test attribute "trusted_party"
      */
-    public function testPropertyPriorHistory()
+    public function testPropertyTrustedParty()
     {
     }
 }

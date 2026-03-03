@@ -90,7 +90,7 @@ class PhishingDetectionApi
     /**
      * Operation phishingDetectEmailAdvancedPost
      *
-     * Perform advanced AI phishing detection and classification against input email.  Analyzes input email as well as embedded URLs with AI deep learning to detect phishing, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.
+     * Perform advanced AI phishing detection and classification against input email.  Supports email input as a file (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, HTML, EML, MSG, PNG, JPG, WEBP) or as an HTML body string.  Analyzes input email as well as embedded URLs with AI deep learning to detect phishing, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.
      *
      * @param  \Swagger\Client\Model\AdvancedEmailDetectionRequest $body Phishing detection request (optional)
      *
@@ -107,7 +107,7 @@ class PhishingDetectionApi
     /**
      * Operation phishingDetectEmailAdvancedPostWithHttpInfo
      *
-     * Perform advanced AI phishing detection and classification against input email.  Analyzes input email as well as embedded URLs with AI deep learning to detect phishing, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.
+     * Perform advanced AI phishing detection and classification against input email.  Supports email input as a file (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, HTML, EML, MSG, PNG, JPG, WEBP) or as an HTML body string.  Analyzes input email as well as embedded URLs with AI deep learning to detect phishing, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.
      *
      * @param  \Swagger\Client\Model\AdvancedEmailDetectionRequest $body Phishing detection request (optional)
      *
@@ -182,7 +182,7 @@ class PhishingDetectionApi
     /**
      * Operation phishingDetectEmailAdvancedPostAsync
      *
-     * Perform advanced AI phishing detection and classification against input email.  Analyzes input email as well as embedded URLs with AI deep learning to detect phishing, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.
+     * Perform advanced AI phishing detection and classification against input email.  Supports email input as a file (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, HTML, EML, MSG, PNG, JPG, WEBP) or as an HTML body string.  Analyzes input email as well as embedded URLs with AI deep learning to detect phishing, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.
      *
      * @param  \Swagger\Client\Model\AdvancedEmailDetectionRequest $body Phishing detection request (optional)
      *
@@ -202,7 +202,7 @@ class PhishingDetectionApi
     /**
      * Operation phishingDetectEmailAdvancedPostAsyncWithHttpInfo
      *
-     * Perform advanced AI phishing detection and classification against input email.  Analyzes input email as well as embedded URLs with AI deep learning to detect phishing, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.
+     * Perform advanced AI phishing detection and classification against input email.  Supports email input as a file (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, HTML, EML, MSG, PNG, JPG, WEBP) or as an HTML body string.  Analyzes input email as well as embedded URLs with AI deep learning to detect phishing, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.
      *
      * @param  \Swagger\Client\Model\AdvancedEmailDetectionRequest $body Phishing detection request (optional)
      *
@@ -353,7 +353,7 @@ class PhishingDetectionApi
     /**
      * Operation phishingDetectFileAdvancedPost
      *
-     * Perform advanced AI phishing detection and classification against input text string.  Analyzes input content as well as embedded URLs with AI deep learning to detect phishing, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.
+     * Perform advanced AI phishing detection and classification on an input image or document (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, HTML, EML, MSG, PNG, JPG, WEBP).  Analyzes input content as well as embedded URLs with AI deep learning to detect phishing, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.
      *
      * @param  string $model model (optional, default to Advanced)
      * @param  string $custom_policy_id custom_policy_id (optional)
@@ -372,7 +372,7 @@ class PhishingDetectionApi
     /**
      * Operation phishingDetectFileAdvancedPostWithHttpInfo
      *
-     * Perform advanced AI phishing detection and classification against input text string.  Analyzes input content as well as embedded URLs with AI deep learning to detect phishing, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.
+     * Perform advanced AI phishing detection and classification on an input image or document (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, HTML, EML, MSG, PNG, JPG, WEBP).  Analyzes input content as well as embedded URLs with AI deep learning to detect phishing, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.
      *
      * @param  string $model (optional, default to Advanced)
      * @param  string $custom_policy_id (optional)
@@ -449,7 +449,7 @@ class PhishingDetectionApi
     /**
      * Operation phishingDetectFileAdvancedPostAsync
      *
-     * Perform advanced AI phishing detection and classification against input text string.  Analyzes input content as well as embedded URLs with AI deep learning to detect phishing, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.
+     * Perform advanced AI phishing detection and classification on an input image or document (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, HTML, EML, MSG, PNG, JPG, WEBP).  Analyzes input content as well as embedded URLs with AI deep learning to detect phishing, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.
      *
      * @param  string $model (optional, default to Advanced)
      * @param  string $custom_policy_id (optional)
@@ -471,7 +471,7 @@ class PhishingDetectionApi
     /**
      * Operation phishingDetectFileAdvancedPostAsyncWithHttpInfo
      *
-     * Perform advanced AI phishing detection and classification against input text string.  Analyzes input content as well as embedded URLs with AI deep learning to detect phishing, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.
+     * Perform advanced AI phishing detection and classification on an input image or document (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, HTML, EML, MSG, PNG, JPG, WEBP).  Analyzes input content as well as embedded URLs with AI deep learning to detect phishing, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.
      *
      * @param  string $model (optional, default to Advanced)
      * @param  string $custom_policy_id (optional)
@@ -636,7 +636,7 @@ class PhishingDetectionApi
     /**
      * Operation phishingDetectFilePost
      *
-     * Perform AI phishing detection and classification on an input image or document (PDF or DOCX).  Analyzes input content as well as embedded URLs with AI deep learnign to detect phishing and other unsafe content.  Uses 100-125 API calls depending on model selected.
+     * Perform AI phishing detection and classification on an input image or document (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, HTML, EML, MSG, PNG, JPG, WEBP).  Analyzes input content as well as embedded URLs with AI deep learning to detect phishing and other unsafe content.  Uses 100-125 API calls depending on model selected.
      *
      * @param  string $model Model to use; default setting is Advanced (optional, default to Advanced)
      * @param  \SplFileObject $input_file input_file (optional)
@@ -654,7 +654,7 @@ class PhishingDetectionApi
     /**
      * Operation phishingDetectFilePostWithHttpInfo
      *
-     * Perform AI phishing detection and classification on an input image or document (PDF or DOCX).  Analyzes input content as well as embedded URLs with AI deep learnign to detect phishing and other unsafe content.  Uses 100-125 API calls depending on model selected.
+     * Perform AI phishing detection and classification on an input image or document (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, HTML, EML, MSG, PNG, JPG, WEBP).  Analyzes input content as well as embedded URLs with AI deep learning to detect phishing and other unsafe content.  Uses 100-125 API calls depending on model selected.
      *
      * @param  string $model Model to use; default setting is Advanced (optional, default to Advanced)
      * @param  \SplFileObject $input_file (optional)
@@ -730,7 +730,7 @@ class PhishingDetectionApi
     /**
      * Operation phishingDetectFilePostAsync
      *
-     * Perform AI phishing detection and classification on an input image or document (PDF or DOCX).  Analyzes input content as well as embedded URLs with AI deep learnign to detect phishing and other unsafe content.  Uses 100-125 API calls depending on model selected.
+     * Perform AI phishing detection and classification on an input image or document (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, HTML, EML, MSG, PNG, JPG, WEBP).  Analyzes input content as well as embedded URLs with AI deep learning to detect phishing and other unsafe content.  Uses 100-125 API calls depending on model selected.
      *
      * @param  string $model Model to use; default setting is Advanced (optional, default to Advanced)
      * @param  \SplFileObject $input_file (optional)
@@ -751,7 +751,7 @@ class PhishingDetectionApi
     /**
      * Operation phishingDetectFilePostAsyncWithHttpInfo
      *
-     * Perform AI phishing detection and classification on an input image or document (PDF or DOCX).  Analyzes input content as well as embedded URLs with AI deep learnign to detect phishing and other unsafe content.  Uses 100-125 API calls depending on model selected.
+     * Perform AI phishing detection and classification on an input image or document (PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, HTML, EML, MSG, PNG, JPG, WEBP).  Analyzes input content as well as embedded URLs with AI deep learning to detect phishing and other unsafe content.  Uses 100-125 API calls depending on model selected.
      *
      * @param  string $model Model to use; default setting is Advanced (optional, default to Advanced)
      * @param  \SplFileObject $input_file (optional)
@@ -910,7 +910,7 @@ class PhishingDetectionApi
     /**
      * Operation phishingDetectTextStringAdvancedPost
      *
-     * Perform advanced AI phishing detection and classification against input text string.  Analyzes input content as well as embedded URLs with AI deep learnign to detect spam, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.
+     * Perform advanced AI phishing detection and classification against input text string.  Analyzes input content as well as embedded URLs with AI deep learning to detect spam, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.
      *
      * @param  \Swagger\Client\Model\PhishingDetectionAdvancedRequest $body Phishing detection request (optional)
      *
@@ -927,7 +927,7 @@ class PhishingDetectionApi
     /**
      * Operation phishingDetectTextStringAdvancedPostWithHttpInfo
      *
-     * Perform advanced AI phishing detection and classification against input text string.  Analyzes input content as well as embedded URLs with AI deep learnign to detect spam, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.
+     * Perform advanced AI phishing detection and classification against input text string.  Analyzes input content as well as embedded URLs with AI deep learning to detect spam, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.
      *
      * @param  \Swagger\Client\Model\PhishingDetectionAdvancedRequest $body Phishing detection request (optional)
      *
@@ -1002,7 +1002,7 @@ class PhishingDetectionApi
     /**
      * Operation phishingDetectTextStringAdvancedPostAsync
      *
-     * Perform advanced AI phishing detection and classification against input text string.  Analyzes input content as well as embedded URLs with AI deep learnign to detect spam, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.
+     * Perform advanced AI phishing detection and classification against input text string.  Analyzes input content as well as embedded URLs with AI deep learning to detect spam, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.
      *
      * @param  \Swagger\Client\Model\PhishingDetectionAdvancedRequest $body Phishing detection request (optional)
      *
@@ -1022,7 +1022,7 @@ class PhishingDetectionApi
     /**
      * Operation phishingDetectTextStringAdvancedPostAsyncWithHttpInfo
      *
-     * Perform advanced AI phishing detection and classification against input text string.  Analyzes input content as well as embedded URLs with AI deep learnign to detect spam, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.
+     * Perform advanced AI phishing detection and classification against input text string.  Analyzes input content as well as embedded URLs with AI deep learning to detect spam, phishing and other unsafe content.  Uses 25-100 API calls depending on model selected.
      *
      * @param  \Swagger\Client\Model\PhishingDetectionAdvancedRequest $body Phishing detection request (optional)
      *

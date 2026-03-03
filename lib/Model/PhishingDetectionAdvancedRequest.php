@@ -74,7 +74,8 @@ class PhishingDetectionAdvancedRequest implements ModelInterface, ArrayAccess
         'from_phone_number' => 'string',
         'to_phone_number' => 'string',
         'from_email_address' => 'string',
-        'to_email_address' => 'string'
+        'to_email_address' => 'string',
+        'prior_history' => '\Swagger\Client\Model\PriorHistoryItem[]'
     ];
 
     /**
@@ -99,7 +100,8 @@ class PhishingDetectionAdvancedRequest implements ModelInterface, ArrayAccess
         'from_phone_number' => null,
         'to_phone_number' => null,
         'from_email_address' => null,
-        'to_email_address' => null
+        'to_email_address' => null,
+        'prior_history' => null
     ];
 
     /**
@@ -145,7 +147,8 @@ class PhishingDetectionAdvancedRequest implements ModelInterface, ArrayAccess
         'from_phone_number' => 'FromPhoneNumber',
         'to_phone_number' => 'ToPhoneNumber',
         'from_email_address' => 'FromEmailAddress',
-        'to_email_address' => 'ToEmailAddress'
+        'to_email_address' => 'ToEmailAddress',
+        'prior_history' => 'PriorHistory'
     ];
 
     /**
@@ -170,7 +173,8 @@ class PhishingDetectionAdvancedRequest implements ModelInterface, ArrayAccess
         'from_phone_number' => 'setFromPhoneNumber',
         'to_phone_number' => 'setToPhoneNumber',
         'from_email_address' => 'setFromEmailAddress',
-        'to_email_address' => 'setToEmailAddress'
+        'to_email_address' => 'setToEmailAddress',
+        'prior_history' => 'setPriorHistory'
     ];
 
     /**
@@ -195,7 +199,8 @@ class PhishingDetectionAdvancedRequest implements ModelInterface, ArrayAccess
         'from_phone_number' => 'getFromPhoneNumber',
         'to_phone_number' => 'getToPhoneNumber',
         'from_email_address' => 'getFromEmailAddress',
-        'to_email_address' => 'getToEmailAddress'
+        'to_email_address' => 'getToEmailAddress',
+        'prior_history' => 'getPriorHistory'
     ];
 
     /**
@@ -275,6 +280,7 @@ class PhishingDetectionAdvancedRequest implements ModelInterface, ArrayAccess
         $this->container['to_phone_number'] = isset($data['to_phone_number']) ? $data['to_phone_number'] : null;
         $this->container['from_email_address'] = isset($data['from_email_address']) ? $data['from_email_address'] : null;
         $this->container['to_email_address'] = isset($data['to_email_address']) ? $data['to_email_address'] : null;
+        $this->container['prior_history'] = isset($data['prior_history']) ? $data['prior_history'] : null;
     }
 
     /**
@@ -705,6 +711,30 @@ class PhishingDetectionAdvancedRequest implements ModelInterface, ArrayAccess
     public function setToEmailAddress($to_email_address)
     {
         $this->container['to_email_address'] = $to_email_address;
+
+        return $this;
+    }
+
+    /**
+     * Gets prior_history
+     *
+     * @return \Swagger\Client\Model\PriorHistoryItem[]
+     */
+    public function getPriorHistory()
+    {
+        return $this->container['prior_history'];
+    }
+
+    /**
+     * Sets prior_history
+     *
+     * @param \Swagger\Client\Model\PriorHistoryItem[] $prior_history Optional: Prior context history (e.g. message history) leading up to the current input string. If provided, the AI will take this history into account as context when evaluating the current input.
+     *
+     * @return $this
+     */
+    public function setPriorHistory($prior_history)
+    {
+        $this->container['prior_history'] = $prior_history;
 
         return $this;
     }
